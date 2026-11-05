@@ -1,0 +1,51 @@
+# ZenithDefend Configuration
+# Re-engineered data logging and anti-griefing system for Paper 26.3
+
+database:
+  # Supported types: sqlite, mysql
+  type: sqlite
+  table-prefix: zd_
+  pool-size: 10
+  connection-timeout-ms: 10000
+  mysql:
+    host: localhost
+    port: 3306
+    database: zenithdefend
+    username: root
+    password: ""
+
+logging:
+  # Block Events
+  block-break: true
+  block-place: true
+  block-burn: true
+  block-ignite: true
+  block-explode: true
+  block-movement: true
+  liquid-flow: true
+
+  # Containers & Inventory
+  containers: true
+  container-hoppers: false
+
+  # Player Activity
+  player-interactions: true
+  player-chat: true
+  player-commands: true
+  player-sessions: true
+
+  # Entities
+  entity-damage: true
+  entity-death: true
+  hanging-entities: true
+
+  # Signs
+  sign-changes: true
+
+performance:
+  # Maximum items processed in one database batch
+  queue-batch-size: 500
+  # Interval between batch writes to the database in milliseconds
+  queue-flush-interval-ms: 500
+  # Maximum blocks reverted per server tick during rollback/restore
+  rollback-batch-size: 250
