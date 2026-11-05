@@ -1,95 +1,102 @@
 # ZenithDefend
 
 <p align="center">
-  <b>Enterprise Data Logging, Anti-Griefing, and Rollback Engine</b><br>
-  <i>Built for Paper, Purpur, Folia, and Spigot — Supporting Minecraft <b>1.20 through 26.3</b></i>
+  <b>High-Performance Data Logging, Anti-Griefing, and Rollback Engine</b>
+  <br />
+  <i>Engineered for Paper, Purpur, Folia, and Spigot — Fully playable from <b>Minecraft 1.20 up to 26.3</b>!</i>
 </p>
 
 ---
 
-> 🏆 **Daily Gold:** ZenithDefend is engineered as a daily gold-standard anti-grief system—rock-solid, zero-tick lag, and maximum reliability. Whether you run a private SMP or a massive high-traffic network, this plugin is completely plug-and-play and ready for action.
->
-> 💬 **Need Help or Found an Issue?** Have questions, suggestions, or need support? Direct Message me on Discord: **`@kzen_fights`**
+## ⚡ Overview
+
+**ZenithDefend** is an enterprise-grade block logger, container transaction tracker, and anti-griefing system built as a modern, high-performance alternative to CoreProtect.
+
+Whether you run a small survival server, an SMP, or a massive network, ZenithDefend provides **lag-free, real-time logging and chunk-batched rollbacks** with zero impact on server tick rates (MSPT).
 
 ---
 
-## 🎮 Multi-Version Compatibility (1.20 – 26.3)
+## 🎮 Multi-Version Compatibility
 
-ZenithDefend is fully playable and tested across all modern Minecraft versions. Dedicated builds are provided to match your server's exact Java runtime and eliminate class-version errors:
+ZenithDefend has dedicated builds tailored for every modern Minecraft generation:
 
-| Minecraft Version Range | Supported Patch Versions | Java Runtime | Recommended Download |
-| :--- | :--- | :---: | :--- |
-| **Minecraft 1.20.x** | `1.20`, `1.20.1`, `1.20.2`, `1.20.3`, `1.20.4`, `1.20.5`, `1.20.6` | **Java 17 LTS+** | `ZenithDefend-1.0.0-MC1.20.jar` |
-| **Minecraft 1.21.x** | `1.21`, `1.21.1`, `1.21.2`, `1.21.3`, `1.21.4`, `1.21.5`, `1.21.6`, `1.21.7`, `1.21.8`, `1.21.9`, `1.21.10`, `1.21.11` | **Java 21 LTS+** | `ZenithDefend-1.0.0-MC1.21.jar` |
-| **Minecraft 26.x** | `26.1`, `26.2`, `26.3` | **Java 25 LTS+** | `ZenithDefend-1.0.0.jar` |
+* 🟢 **Minecraft 1.20 Series (`1.20` – `1.20.6`):**
+  * Target: **Java 17 LTS**
+  * File: `ZenithDefend-1.0.0-MC1.20.jar`
+* 🟢 **Minecraft 1.21 Series (`1.21` – `1.21.11`):**
+  * Target: **Java 21 LTS**
+  * File: `ZenithDefend-1.0.0-MC1.21.jar`
+* 🟢 **Minecraft 26 Series (`26.1` – `26.3`):**
+  * Target: **Java 25 LTS**
+  * File: `ZenithDefend-1.0.0.jar`
 
-*Full native support for **Paper**, **Purpur**, **Folia**, **Spigot**, and **Bukkit**.*
-
----
-
-## ⚡ What Makes ZenithDefend Special?
-
-* **Click Inspector (`/zd i` or `/zd inspect`)**: Left-click to inspect block placement/break history. Right-click to inspect container transactions (chests, double chests, barrels, hoppers, furnaces, shulker boxes, dispensers, droppers, and chiseled bookshelves).
-* **Lag-Free Rollback (`/zd rb`) & Restore (`/zd rs`)**: Executes changes in chunk-aware tick batches via Paper's region schedulers to prevent main-thread tick spikes (MSPT).
-* **Interactive Log Lookup (`/zd l`)**: Search block, container, chat, command, and interaction records with clickable Adventure MiniMessage pagination (`/zd page <n>`).
-* **High-Performance Async Pipeline**: Zero-lag asynchronous queue using HikariCP connection pooling for SQLite (WAL mode) and MySQL/MariaDB.
-* **100% LuckPerms Native**: Granular permission tree (`zenithdefend.*`, `zenithdefend.inspect`, etc.) with permission-filtered tab suggestions.
+**Supported Platforms:** Paper, Purpur, Folia, Spigot, Bukkit.
 
 ---
 
-## 📥 Installation
+## 🔥 Key Features
 
-1. Download the build matching your server version from the table above or the **Versions** tab.
-2. Drop the `.jar` into your server's `plugins/` directory.
-3. Restart your server. ZenithDefend will automatically generate `plugins/ZenithDefend/config.yml` and initialize the database.
+* 🔎 **Click Inspector (`/zd i` or `/zenithdefend i`):** Left-click any block to inspect its placement/break history, or right-click any chest, barrel, furnace, or shulker box to view all item deposits and withdrawals.
+* ⏪ **Lag-Free Rollback (`/zd rb`):** Chunk-batched rollback engine processes thousands of changes smoothly without server hitching.
+* ⏩ **Reversible Restore (`/zd rs`):** Reapply changes or undo previous rollbacks with a single command.
+* 📜 **Log Lookup (`/zd l`):** Search block, container, chat, command, and interaction logs with clickable chat pagination (`/zd page <n>`).
+* ⚡ **Zero-Lag Async Pipeline:** Dedicated daemon queue batches database transactions asynchronously.
+* 🗄️ **Dual Storage Support:** Ultra-fast local SQLite (WAL mode) or external MySQL / MariaDB via HikariCP.
+* 🛡️ **Full LuckPerms Integration:** Granular permissions and smart tab-completion that hides commands from unauthorized players.
 
 ---
 
-## 🛠️ Commands & Permissions
+## 🕹️ Command Reference
 
-ZenithDefend supports both **`/zd`** and **`/zenithdefend`** interchangeably:
-
-| Command | Shorthand | Description | Permission |
+| Command | Alias | Description | Permission |
 | :--- | :--- | :--- | :--- |
 | `/zd inspect` | `/zd i` | Toggle click inspection on blocks & containers | `zenithdefend.inspect` |
 | `/zd lookup <params>` | `/zd l` | Search logged actions (blocks, containers, chat, commands) | `zenithdefend.lookup` |
-| `/zd rollback <params>` | `/zd rb` | Rollback griefing actions with user/time/radius filters | `zenithdefend.rollback` |
-| `/zd restore <params>` | `/zd rs` | Reapply / undo previously rolled back modifications | `zenithdefend.restore` |
-| `/zd page <number>` | — | Navigate search pages with interactive chat buttons | `zenithdefend.lookup` |
-| `/zd purge t:<time>` | — | Purge old logs (e.g. `t:30d`, `t:12w`) and reclaim disk space | `zenithdefend.purge` |
-| `/zd status` | — | Display live database connection & queue metrics | `zenithdefend.status` |
+| `/zd rollback <params>` | `/zd rb` | Revert griefing within a time/radius/player filter | `zenithdefend.rollback` |
+| `/zd restore <params>` | `/zd rs` | Reapply / undo previously rolled back changes | `zenithdefend.restore` |
+| `/zd page <number>` | — | Navigate search results with interactive clickable chat buttons | `zenithdefend.lookup` |
+| `/zd purge t:<time>` | — | Delete old logs (e.g. `t:30d`, `t:4w`) to free disk space | `zenithdefend.purge` |
+| `/zd status` | — | Display live queue, batch size, and database metrics | `zenithdefend.status` |
 | `/zd reload` | — | Reload configuration settings from disk | `zenithdefend.reload` |
 
 ---
 
-## 🔍 Filter Parameter Syntax
+## 🔍 Filter Syntax Examples
 
-Use parameters in `/zd lookup`, `/zd rollback`, and `/zd restore`:
+* `/zd rollback u:Griefer123 t:2h r:20` — Rollback Griefer123 in a 20-block radius over the last 2 hours.
+* `/zd rollback u:#fire t:1d r:50` — Undo fire spread within 50 blocks from the last 24 hours.
+* `/zd lookup a:container r:10 t:12h` — Check chest transactions within 10 blocks over the last 12 hours.
+* `/zd lookup u:Steve a:chat t:1h` — Search Steve's chat messages from the past hour.
 
-* **`u:<user>`** — Target specific players or causes (e.g. `u:Griefer`, `u:#fire`, `u:#tnt`, `u:#water`).
-* **`t:<time>`** — Time filter (e.g. `t:30s`, `t:15m`, `t:2h`, `t:7d`, `t:4w`).
-* **`r:<radius>`** — Block radius around you (e.g. `r:15`, `r:50`, `r:#world`, `r:#global`).
-* **`a:<action>`** — Action filter (`+block`, `-block`, `container`, `click`, `kill`, `chat`, `command`).
-* **`b:<blocks>`** — Filter by specific blocks (e.g. `b:tnt,lava,diamond_block`).
-* **`e:<exclude>`** — Exclude specific blocks.
+---
 
-*Quick Examples:*
+## 🛡️ LuckPerms Quick Setup
+
+To make ZenithDefend visible and usable **only by your `admin` group**:
+
 ```bash
-/zd rollback u:Griefer123 t:2h r:20
-/zd rollback u:#fire t:1d r:50
-/zd lookup a:container r:10 t:12h
-/zd lookup u:Steve a:chat t:1h
+# Block all non-admins (hides commands and tab completion):
+/lp group default permission set zenithdefend.* false
+
+# Grant full access to your admin group:
+/lp group admin permission set zenithdefend.* true
+
+# Add yourself as an admin:
+/lp user <YourUsername> parent add admin
 ```
 
 ---
 
-## 💬 Community & Support
+## 💬 Support & Contact
 
-* **Discord:** Direct message **`@kzen_fights`** for questions, feature requests, or bug reports.
-* **GitHub Issues:** [github.com/krishnamittal0409-commits/ZenithDefend-Release/issues](https://github.com/krishnamittal0409-commits/ZenithDefend-Release/issues)
+Have a question, feature request, or need help configuring the plugin on your server?
+
+* 💬 **Discord DM:** **`@kzen_fights`** (DM me directly on Discord for support!)
+* 🐛 **GitHub Issues:** [Issue Tracker](https://github.com/krishnamittal0409-commits/ZenithDefend-Release/issues)
+* 💻 **Source Code:** [Private Repository](https://github.com/krishnamittal0409-commits/ZenithDefend)
 
 ---
 
 ## 📄 License
 
-ZenithDefend is licensed under the **GNU General Public License v3.0**.
+Released under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
