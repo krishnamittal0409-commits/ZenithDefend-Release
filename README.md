@@ -34,7 +34,7 @@ ZenithDefend has dedicated builds tailored for every modern Minecraft generation
 
 ---
 
-## 🔥 Key Features
+## 🌟 Key Features
 
 * 🔎 **Click Inspector (`/zd i` or `/zenithdefend i`):** Left-click any block to inspect its placement/break history, or right-click any chest, barrel, furnace, or shulker box to view all item deposits and withdrawals.
 * ⏪ **Lag-Free Rollback (`/zd rb`):** Chunk-batched rollback engine processes thousands of changes smoothly without server hitching.
@@ -46,7 +46,7 @@ ZenithDefend has dedicated builds tailored for every modern Minecraft generation
 
 ---
 
-## 🕹️ Command Reference
+## 📋 Command Reference
 
 | Command | Alias | Description | Permission |
 | :--- | :--- | :--- | :--- |
@@ -70,7 +70,7 @@ ZenithDefend has dedicated builds tailored for every modern Minecraft generation
 
 ---
 
-## 🛡️ LuckPerms Quick Setup
+## 🔒 LuckPerms Quick Setup
 
 To make ZenithDefend visible and usable **only by your `admin` group**:
 
@@ -91,12 +91,12 @@ To make ZenithDefend visible and usable **only by your `admin` group**:
 
 Have a question, feature request, or need help configuring the plugin on your server?
 
-* 💬 **Discord:** [**@kzen_fights (Click to Message)**](https://discord.com/users/1275335096924373032)
+* 💬 **Discord:** **`@kzen_fights`** (User ID: `1275335096924373032` — feel free to DM me directly on Discord for support!)
 * 🐛 **GitHub Issues:** [Issue Tracker](https://github.com/krishnamittal0409-commits/ZenithDefend-Release/issues)
-* 💻 **Source Code:** [Private Repository](https://github.com/krishnamittal0409-commits/ZenithDefend)
+* 📦 **Release Repository:** [ZenithDefend-Release on GitHub](https://github.com/krishnamittal0409-commits/ZenithDefend-Release)
 
 ---
 
 ## 📄 License
 
-Released under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
+Released under the **GNU General Public License v3.0**. See the [LICENSE](https://github.com/krishnamittal0409-commits/ZenithDefend-Release/blob/main/LICENSE) for details.
