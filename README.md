@@ -91,7 +91,7 @@ To make ZenithDefend visible and usable **only by your `admin` group**:
 
 Have a question, feature request, or need help configuring the plugin on your server?
 
-* 💬 **Discord DM:** **`@kzen_fights`** (DM me directly on Discord for support!)
+* 💬 **Discord:** [**@kzen_fights (Click to Message)**](https://discord.com/users/1275335096924373032)
 * 🐛 **GitHub Issues:** [Issue Tracker](https://github.com/krishnamittal0409-commits/ZenithDefend-Release/issues)
 * 💻 **Source Code:** [Private Repository](https://github.com/krishnamittal0409-commits/ZenithDefend)
 
