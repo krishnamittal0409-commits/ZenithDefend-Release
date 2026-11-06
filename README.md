@@ -50,6 +50,7 @@ ZenithDefend has dedicated builds tailored for every modern Minecraft generation
 
 | Command | Alias | Description | Permission |
 | :--- | :--- | :--- | :--- |
+| `/zd list` | `/zd help` | Show interactive dashboard with clickable action buttons | `zenithdefend.use` |
 | `/zd inspect` | `/zd i` | Toggle click inspection on blocks & containers | `zenithdefend.inspect` |
 | `/zd lookup <params>` | `/zd l` | Search logged actions (blocks, containers, chat, commands) | `zenithdefend.lookup` |
 | `/zd rollback <params>` | `/zd rb` | Revert griefing within a time/radius/player filter | `zenithdefend.rollback` |
