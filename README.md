@@ -5,8 +5,12 @@
   <br />
   <b>High-Performance Data Logging, Anti-Griefing, and Rollback Engine</b>
   <br />
+  <i>Created and Developed by <b>Krishna Mittal</b> • All Rights Reserved</i>
+  <br />
   <i>Engineered for Paper, Purpur, Folia, and Spigot - Playable from <b>Minecraft 1.20 up to 26.3</b>!</i>
   <br /><br />
+  <a href="https://modrinth.com/plugin/zenithdefend"><img src="https://img.shields.io/badge/Author-Krishna_Mittal-00d2ff?style=for-the-badge" alt="Author Krishna Mittal" /></a>
+  <a href="https://modrinth.com/plugin/zenithdefend"><img src="https://img.shields.io/badge/Rights-All_Rights_Belong_To_Krishna_Mittal-blueviolet?style=for-the-badge" alt="All Rights Belong To Krishna Mittal" /></a>
   <a href="https://modrinth.com/plugin/zenithdefend"><img src="https://img.shields.io/badge/Minecraft-1.20_to_26.3-2ea44f?style=for-the-badge&logo=minecraft&logoColor=white" alt="Minecraft Version" /></a>
   <a href="https://modrinth.com/plugin/zenithdefend"><img src="https://img.shields.io/badge/Platform-Paper_%7C_Purpur_%7C_Folia-e67e22?style=for-the-badge" alt="Platform Paper Purpur Folia" /></a>
   <a href="https://modrinth.com/plugin/zenithdefend"><img src="https://img.shields.io/badge/Java-17_%7C_21-007acc?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Runtime" /></a>
@@ -254,6 +258,14 @@ database:
 
 ---
 
+## 👑 Author & Legal Rights
+
+* **Original Creator & Sole Author:** **Krishna Mittal**
+* **Rights & Intellectual Property:** **All rights belong entirely to Krishna Mittal.** All proprietary ownership, copyright, and distribution rights are held by Krishna Mittal.
+* **Copyright:** © 2026 Krishna Mittal. All rights reserved.
+
+---
+
 ## 📄 License
 
-Released under the **GNU General Public License v3.0**.
+Released under the **GNU General Public License v3.0** with all authorship and ownership rights belonging to **Krishna Mittal**.
