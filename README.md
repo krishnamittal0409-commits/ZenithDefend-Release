@@ -5,7 +5,7 @@
   <br />
   <b>High-Performance Data Logging, Anti-Griefing, and Rollback Engine</b>
   <br />
-  <i>Engineered for Paper, Purpur, Folia, and Spigot — Playable from <b>Minecraft 1.20 up to 26.3</b>!</i>
+  <i>Engineered for Paper, Purpur, Folia, and Spigot - Playable from <b>Minecraft 1.20 up to 26.3</b>!</i>
   <br /><br />
   <a href="https://modrinth.com/plugin/zenithdefend"><img src="https://img.shields.io/badge/Minecraft-1.20_to_26.3-2ea44f?style=for-the-badge&logo=minecraft&logoColor=white" alt="Minecraft Version" /></a>
   <a href="https://modrinth.com/plugin/zenithdefend"><img src="https://img.shields.io/badge/Platform-Paper_%7C_Purpur_%7C_Folia-e67e22?style=for-the-badge" alt="Platform Paper Purpur Folia" /></a>
@@ -88,52 +88,52 @@ Parameters can be specified in any order in `/zd rollback`, `/zd restore`, and `
 
 Filters actions by the player or environmental cause responsible:
 
-* `u:<player>` — Target a specific player (e.g. `u:Steve`).
-* `u:<player1>,<player2>` — Target multiple players (e.g. `u:Steve,Alex,Griefer99`).
-* `u:#tnt` — All TNT explosions: Primed TNT, TNT Minecarts, End Crystals, Respawn Anchors.
-* `u:#wither` — Wither skull projectiles and Wither body break smashes.
-* `u:#creeper` — Creeper blast damage.
-* `u:#fire` — Fire spread and combustion.
-* `u:#lava` — Lava flows and burning damage.
-* `u:#water` — Water flow and fluid washes.
-* `u:#dragon` — Ender Dragon block destruction.
-* `u:#enderman` — Enderman block pickups and placements.
-* `u:#explosion` — All explosion types combined.
-* `u:#physics` — Gravity blocks (sand, gravel) and detached support blocks (torches, redstone).
+* `u:<player>` - Target a specific player (e.g. `u:Steve`).
+* `u:<player1>,<player2>` - Target multiple players (e.g. `u:Steve,Alex,Griefer99`).
+* `u:#tnt` - All TNT explosions: Primed TNT, TNT Minecarts, End Crystals, Respawn Anchors.
+* `u:#wither` - Wither skull projectiles and Wither body break smashes.
+* `u:#creeper` - Creeper blast damage.
+* `u:#fire` - Fire spread and combustion.
+* `u:#lava` - Lava flows and burning damage.
+* `u:#water` - Water flow and fluid washes.
+* `u:#dragon` - Ender Dragon block destruction.
+* `u:#enderman` - Enderman block pickups and placements.
+* `u:#explosion` - All explosion types combined.
+* `u:#physics` - Gravity blocks (sand, gravel) and detached support blocks (torches, redstone).
 
 ### ⏰ Time Window (`t:<time>`)
 
 Restricts the query to actions within a specific past timeframe:
 
-* `t:<number>s` — Seconds (e.g. `t:30s`, `t:90s`)
-* `t:<number>m` — Minutes (e.g. `t:10m`, `t:15m`, `t:30m`)
-* `t:<number>h` — Hours (e.g. `t:1h`, `t:6h`, `t:12h`)
-* `t:<number>d` — Days (e.g. `t:1d`, `t:3d`, `t:7d`)
-* `t:<number>w` — Weeks (e.g. `t:1w`, `t:2w`, `t:4w`)
+* `t:<number>s` - Seconds (e.g. `t:30s`, `t:90s`)
+* `t:<number>m` - Minutes (e.g. `t:10m`, `t:15m`, `t:30m`)
+* `t:<number>h` - Hours (e.g. `t:1h`, `t:6h`, `t:12h`)
+* `t:<number>d` - Days (e.g. `t:1d`, `t:3d`, `t:7d`)
+* `t:<number>w` - Weeks (e.g. `t:1w`, `t:2w`, `t:4w`)
 
 ### 📍 Radius & Dimension Scope (`r:<radius>`)
 
 Controls the spatial area of the operation:
 
-* `r:<number>` — Spherical block radius centered on you (e.g. `r:10`, `r:50`, `r:100`).
-* `r:#world` — The entire current dimension without distance bounds.
-* `r:#global` — **All 3 dimensions (Overworld, Nether, and The End)** simultaneously.
+* `r:<number>` - Spherical block radius centered on you (e.g. `r:10`, `r:50`, `r:100`).
+* `r:#world` - The entire current dimension without distance bounds.
+* `r:#global` - **All 3 dimensions (Overworld, Nether, and The End)** simultaneously.
 
 ### ⚡ Action Filter (`a:<action>`)
 
 Filters specifically by the type of action performed:
 
-* `a:+block` — Only block placements.
-* `a:-block` — Only block breaks and destructions.
-* `a:block` — Both block placements and block breaks.
-* `a:container` — Chest, barrel, hopper, and shulker transactions (deposits & withdrawals).
-* `a:click` — Door, lever, trapdoor, button, and lectern interactions.
-* `a:chat` — Player chat messages.
-* `a:command` — Commands run by players.
-* `a:burn` — Blocks destroyed by fire or lava.
-* `a:explode` — Blocks destroyed by explosive forces.
-* `a:natural` — Environmental world decay (leaf decay, ice melting, snow fading).
-* `a:liquid` — Liquid flows and fluid spreads.
+* `a:+block` - Only block placements.
+* `a:-block` - Only block breaks and destructions.
+* `a:block` - Both block placements and block breaks.
+* `a:container` - Chest, barrel, hopper, and shulker transactions (deposits & withdrawals).
+* `a:click` - Door, lever, trapdoor, button, and lectern interactions.
+* `a:chat` - Player chat messages.
+* `a:command` - Commands run by players.
+* `a:burn` - Blocks destroyed by fire or lava.
+* `a:explode` - Blocks destroyed by explosive forces.
+* `a:natural` - Environmental world decay (leaf decay, ice melting, snow fading).
+* `a:liquid` - Liquid flows and fluid spreads.
 
 ### 🧱 Block Include & Exclude (`b:` and `e:`)
 
