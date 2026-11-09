@@ -2,6 +2,18 @@
 
 All notable changes to **ZenithDefend** will be documented in this file.
 
+## [1.0.1] - 2026-11-09
+
+### Fixed & Enhanced
+- **Fixed Class Version Compatibility**: Compiled with standard Java 21 LTS (bytecode version 65) and Java 17 LTS (bytecode version 61), eliminating `UnsupportedClassVersionError` across all Paper 1.20, 1.21, and 26.x server environments.
+- **Fixed Database Transaction Rollbacks**: Completely eliminated SQLite/MySQL `UNIQUE` constraint crashes in `DictionaryManager`. Dictionary insertions now self-heal gracefully with fallback queries, ensuring all block, container, and chat logs are safely committed.
+- **Fixed Folia vs Paper Scheduler Crashes**: Introduced universal runtime platform detector `PlatformScheduler` to safely bridge Folia region schedulers and standard Paper/Spigot schedulers with zero `NoSuchMethodError` exceptions.
+- **Fixed Filter Parameters (`b:` and `e:`)**: Added full SQL filtering for included and excluded material types in both `/zd lookup` and `/zd rollback`.
+- **Added Bucket Action Logging**: Added support for `PlayerBucketEmptyEvent` and `PlayerBucketFillEvent` to log water and lava placements.
+- **Enhanced Inspector Double-Clicking**: Added hand equipment check and smart fallback to inspect both clicked block faces and adjacent positions.
+- **Modernized Web Dashboard UI/UX**: Completely redesigned `/zd`, `/zd list`, `/zd help`, and `/zd status` into a futuristic, web-card chat console with live telemetry, visual memory load bars, interactive action buttons, relative timestamps (`14s ago`, `2m ago`), and clickable teleport links.
+- **LuckPerms Admin Visibility**: Added root command permission `zenithdefend.use` and group node `zenithdefend.admin` so commands and tab completion are hidden from non-admin players.
+
 ## [1.0.0] - 2026-11-06
 
 ### Initial Release
