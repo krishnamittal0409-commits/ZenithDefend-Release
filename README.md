@@ -58,7 +58,7 @@ Dedicated builds are compiled to match your server's exact Java runtime and elim
 * ⚡ **Zero-Lag Async Pipeline:** Dedicated daemon queue batches database transactions asynchronously.
 * 🗄️ **Dual Storage Support:** Ultra-fast local SQLite (WAL mode) or external MySQL / MariaDB via HikariCP.
 * 🛡️ **Full LuckPerms Integration:** Granular permissions and smart tab-completion that hides commands from unauthorized players.
-* 💻 **Web-Style Chat Dashboard:** Modern, interactive card UI with clickable action buttons, live telemetry, and memory graphs.
+* 💬 **Clean, Workable In-Game UI:** Standard, professional Minecraft chat interface (matching CoreProtect and LuckPerms standards) with zero text wrapping, clickable command suggestions, and intuitive pagination.
 
 ---
 
