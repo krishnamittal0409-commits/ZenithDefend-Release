@@ -3,7 +3,7 @@
 <p align="center">
   <b>High-Performance Data Logging, Anti-Griefing, and Rollback Engine</b>
   <br />
-  <i>Engineered for Paper, Purpur, Folia, and Spigot — Fully playable from <b>Minecraft 1.20 up to 26.3</b>!</i>
+  <i>Engineered for Paper, Purpur, Folia, and Spigot - Fully playable from <b>Minecraft 1.20 up to 26.3</b>!</i>
 </p>
 
 ---
@@ -94,7 +94,7 @@ To make ZenithDefend visible and usable **only by your `admin` group**:
 
 Have a question, feature request, or need help configuring the plugin on your server?
 
-* 💬 **Discord:** Contact **@kzen_fights** (Discord User ID: `1275335096924373032`) — feel free to DM me on Discord for support!
+* 💬 **Discord:** Contact **@kzen_fights** (Discord User ID: `1275335096924373032`) - feel free to DM me on Discord for support!
 * 🐛 **GitHub Issues:** [Issue Tracker](https://github.com/krishnamittal0409-commits/ZenithDefend-Release/issues)
 * 📦 **Release Repository:** [ZenithDefend-Release on GitHub](https://github.com/krishnamittal0409-commits/ZenithDefend-Release)
 
