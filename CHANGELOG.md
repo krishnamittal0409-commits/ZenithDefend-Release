@@ -11,7 +11,7 @@ All notable changes to **ZenithDefend** will be documented in this file.
 - **Fixed Filter Parameters (`b:` and `e:`)**: Added full SQL filtering for included and excluded material types in both `/zd lookup` and `/zd rollback`.
 - **Added Bucket Action Logging**: Added support for `PlayerBucketEmptyEvent` and `PlayerBucketFillEvent` to log water and lava placements.
 - **Enhanced Inspector Double-Clicking**: Added hand equipment check and smart fallback to inspect both clicked block faces and adjacent positions.
-- **Modernized Web Dashboard UI/UX**: Completely redesigned `/zd`, `/zd list`, `/zd help`, and `/zd status` into a futuristic, web-card chat console with live telemetry, visual memory load bars, interactive action buttons, relative timestamps (`14s ago`, `2m ago`), and clickable teleport links.
+- **Clean, Workable Professional In-Game Chat UI**: Streamlined all commands, lookups, rollbacks, and inspector output into standard, clean Minecraft interfaces (matching CoreProtect and LuckPerms standards) with zero text wrapping, clickable command tooltips, compact log records, and intuitive pagination buttons.
 - **LuckPerms Admin Visibility**: Added root command permission `zenithdefend.use` and group node `zenithdefend.admin` so commands and tab completion are hidden from non-admin players.
 
 ## [1.0.0] - 2026-11-06
