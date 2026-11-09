@@ -56,6 +56,7 @@ ZenithDefend has dedicated builds tailored for every modern Minecraft generation
 | `/zd lookup <params>` | `/zd l` | Search logged actions (blocks, containers, chat, commands) | `zenithdefend.lookup` |
 | `/zd rollback <params>` | `/zd rb` | Revert griefing within a time/radius/player filter | `zenithdefend.rollback` |
 | `/zd restore <params>` | `/zd rs` | Reapply / undo previously rolled back changes | `zenithdefend.restore` |
+| `/zd rewind <time> [r]` | `/zd reset` | **War Reset Engine**: Reset entire world/radius back in time (restores all TNT, Withers, gravity sand/gravel & broken support blocks) | `zenithdefend.rollback` |
 | `/zd page <number>` | — | Navigate search results with interactive clickable chat buttons | `zenithdefend.lookup` |
 | `/zd purge t:<time>` | — | Delete old logs (e.g. `t:30d`, `t:4w`) to free disk space | `zenithdefend.purge` |
 | `/zd status` | — | Display live queue, batch size, and database metrics | `zenithdefend.status` |
@@ -63,13 +64,17 @@ ZenithDefend has dedicated builds tailored for every modern Minecraft generation
 
 ---
 
-## Filter Syntax Examples
+## Filter Syntax & Rewind Examples
 
-* `/zd rollback u:Griefer123 t:2h r:20` — Rollback Griefer123 in a 20-block radius over the last 2 hours.
-* `/zd rollback u:#fire t:1d r:50` — Undo fire spread within 50 blocks from the last 24 hours.
-* `/zd rollback b:tnt,lava r:30 t:1h` — Undo only TNT and lava placements in a 30-block radius.
-* `/zd lookup a:container r:10 t:12h` — Check chest transactions within 10 blocks over the last 12 hours.
-* `/zd lookup u:Steve a:chat t:1h` — Search Steve's chat messages from the past hour.
+* `/zd rewind 15m` - **War Reset**: Instantly reset the entire world back 15 minutes across all players, TNT, withers, and broken blocks.
+* `/zd rewind 30m 100` - Reset a 100-block radius back 30 minutes.
+* `/zd rollback u:#tnt t:1h r:50` - Rollback all TNT explosions in a 50-block radius.
+* `/zd rollback u:#wither t:2h r:#world` - Undo all Wither destruction (explosions & block breaks) across the entire world.
+* `/zd rollback u:Griefer123 t:2h r:20` - Rollback Griefer123 in a 20-block radius over the last 2 hours.
+* `/zd rollback u:#fire t:1d r:50` - Undo fire spread within 50 blocks from the last 24 hours.
+* `/zd rollback b:tnt,lava r:30 t:1h` - Undo only TNT and lava placements in a 30-block radius.
+* `/zd lookup a:container r:10 t:12h` - Check chest transactions within 10 blocks over the last 12 hours.
+* `/zd lookup u:Steve a:chat t:1h` - Search Steve's chat messages from the past hour.
 
 ---
 
