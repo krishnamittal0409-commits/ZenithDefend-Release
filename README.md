@@ -67,7 +67,7 @@ ZenithDefend provides dedicated builds tailored for every modern Minecraft gener
 | `/zd lookup <params>` | `/zd l` | Search logged actions (blocks, containers, chat, commands) | `zenithdefend.lookup` |
 | `/zd rollback <params>` | `/zd rb` | Revert griefing within a time/radius/player filter | `zenithdefend.rollback` |
 | `/zd restore <params>` | `/zd rs` | Reapply / undo previously rolled back changes | `zenithdefend.restore` |
-| `/zd rewind <time> [r]` | `/zd reset` | **War Reset Engine**: Reset entire world/radius back in time (restores all TNT, Withers, gravity sand/gravel & broken support blocks) | `zenithdefend.rollback` |
+| `/zd rewind <time> [scope]` | `/zd reset` | **War Reset Engine**: Reset server back in time across **all 3 dimensions** (Overworld, Nether, End) or a targeted scope | `zenithdefend.rollback` |
 | `/zd page <number>` | — | Navigate search results with interactive clickable chat buttons | `zenithdefend.lookup` |
 | `/zd purge t:<time>` | — | Delete old logs (e.g. `t:30d`, `t:4w`) to free disk space | `zenithdefend.purge` |
 | `/zd status` | — | Display live queue, batch size, and database metrics | `zenithdefend.status` |
@@ -77,8 +77,10 @@ ZenithDefend provides dedicated builds tailored for every modern Minecraft gener
 
 ## 🎯 Filter Syntax & Rewind Examples
 
-* `/zd rewind 15m` — **War Reset**: Instantly reset the entire world back 15 minutes across all players, TNT, withers, and broken blocks.
-* `/zd rewind 30m 100` — Reset a 100-block radius back 30 minutes.
+* `/zd rewind 15m` — **Full Server Reset**: Instantly resets the **entire server across all 3 dimensions (Overworld, Nether, and The End)** back 15 minutes, restoring all TNT, withers, gravity blocks, and broken structures.
+* `/zd rewind 15m current` — Resets **only your current dimension** (e.g. Overworld) back 15 minutes.
+* `/zd rewind 15m nether` — Resets **only the Nether dimension** back 15 minutes.
+* `/zd rewind 30m 100` — Resets a 100-block radius around you back 30 minutes.
 * `/zd rollback u:#tnt t:1h r:50` — Rollback all TNT explosions in a 50-block radius.
 * `/zd rollback u:#wither t:2h r:#world` — Undo all Wither destruction (explosions & block breaks) across the entire world.
 * `/zd rollback u:Griefer123 t:2h r:20` — Rollback Griefer123 in a 20-block radius over the last 2 hours.
