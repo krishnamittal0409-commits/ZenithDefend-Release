@@ -76,6 +76,7 @@ Dedicated builds are compiled to match your server's exact Java runtime and elim
 | `/zd rollback` | `/zd rb` | `u:<user> t:<time> r:<radius> a:<action> b:<blocks> e:<blocks>` | Revert griefing actions across time, area, or player | `zenithdefend.rollback` |
 | `/zd restore` | `/zd rs` | `u:<user> t:<time> r:<radius> a:<action> b:<blocks> e:<blocks>` | Reapply / undo previously rolled back changes | `zenithdefend.restore` |
 | `/zd rewind` | `/zd reset` | `<time> [all \| current \| nether \| end \| radius]` | **War Reset**: Reset entire server back in time | `zenithdefend.rollback` |
+| `/zd protect` | `/zd zone` | `[wand\|create\|set\|setspawn\|list\|info\|remove\|tp\|flag]` | **Spawn Protection**: 3D cuboid anti-grief zones | `zenithdefend.protect` |
 | `/zd lookup` | `/zd l` | `u:<user> t:<time> r:<radius> a:<action> b:<blocks> e:<blocks>` | Search historical block, container, and chat logs | `zenithdefend.lookup` |
 | `/zd page` | None | `<page_number>` | Jump to specific page of lookup search results | `zenithdefend.lookup` |
 | `/zd purge` | None | `t:<time>` | Purge historical logs older than specified time | `zenithdefend.purge` |
@@ -196,6 +197,47 @@ Narrow down changes to specific materials, or protect certain materials from bei
 
 ---
 
+## 🏰 3D Cuboid Spawn & Region Protection Engine
+
+ZenithDefend includes a high-performance 3D cuboid protection system to protect spawns, arenas, and administrative areas from non-OP griefing.
+
+### 📐 Defining a Protected Zone
+1. **Direct Coordinate Input (forms a 3D Cube/Cuboid):**
+   ```bash
+   /zd protect set <name> <x1> <y1> <z1> <x2> <y2> <z2> [world]
+   ```
+   *Specifies the exact 3D coordinates from one corner point `(x1, y1, z1)` to the opposite corner `(x2, y2, z2)`.*
+
+2. **Visual Protection Wand:**
+   * Run `/zd protect wand` to receive the Golden Hoe wand.
+   * **Left-click** any block to set **Position 1**.
+   * **Right-click** any block to set **Position 2**.
+   * Run `/zd protect create <name>` to define and protect the cuboid.
+
+3. **Quick Auto Spawn Protector:**
+   ```bash
+   /zd protect setspawn [radius]
+   ```
+   *Creates a protected cuboid around spawn from minimum world height (`Y=-64`) to maximum world height (`Y=320`) with customizable radius (default: 50 blocks).*
+
+### 🛡️ Non-OP Grief Protections Enforced:
+* 🚫 **Block Breaking & Placing:** Unauthorized block modification is blocked and notifies the player.
+* 🚫 **Container & Mechanism Security:** Prevents opening chests, barrels, shulkers, hoppers, doors, trapdoors, levers, and buttons.
+* 🚫 **Fluid Griefing:** Prevents placing or collecting lava/water buckets, and stops liquid from flowing across boundaries into protected areas.
+* 🚫 **Explosion Shield:** Filters out TNT, minecarts, crystals, anchors, creepers, and withers from breaking blocks inside protected zones.
+* 🚫 **Crop Trampling:** Blocks physical trampling of farmland.
+* 🚫 **Piston Defense:** Prevents pistons from pushing or pulling blocks across protected zone boundaries.
+* 🚫 **Item Frames & Armor Stands:** Prevents breaking or modifying item displays.
+* 🚫 **Spawn PVP & Creature Protection:** Disables player vs player combat and prevents harming passive mobs and villagers within designated safe zones.
+
+### 🚩 Customizable Flags:
+```bash
+/zd protect flag <name> <break|place|interact|explosions|fire|pvp|mobdamage> <true|false>
+```
+* **Bypass Permission:** Server operators (OP) and players with `zenithdefend.protect.bypass` or `zenithdefend.admin` bypass all restrictions automatically.
+
+---
+
 ## 🔐 LuckPerms Setup & Permissions
 
 ZenithDefend integrates natively with **LuckPerms** and Bukkit's permission system:
@@ -204,6 +246,8 @@ ZenithDefend integrates natively with **LuckPerms** and Bukkit's permission syst
 | :--- | :---: | :--- |
 | `zenithdefend.*` | `OP` | Grants access to all ZenithDefend commands |
 | `zenithdefend.admin` | `OP` | Full administrative control |
+| `zenithdefend.protect` | `OP` | Allows managing spawn and cuboid protection zones |
+| `zenithdefend.protect.bypass` | `OP` | Allows bypassing protection restrictions |
 | `zenithdefend.use` | `true` | Allows using `/zd list`, `/zd help`, and `/zd params` |
 | `zenithdefend.inspect` | `OP` | Allows toggling click inspector (`/zd i`) |
 | `zenithdefend.lookup` | `OP` | Allows searching logged actions (`/zd l`) |
