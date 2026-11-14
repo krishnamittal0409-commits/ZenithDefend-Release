@@ -14,6 +14,18 @@ Whether you run a private SMP, factions server, or high-traffic network, ZenithD
 
 ---
 
+### Supported Minecraft Versions & Drops
+
+ZenithDefend provides dedicated builds specifically compiled for your Minecraft release:
+
+| Release Series | Minecraft Versions & Drops Supported | Required Java | Build Binary |
+| :--- | :--- | :---: | :--- |
+| **26 Series (2026)** | `26.1`, `26.1.1`, `26.1.2`, `26.2`, `26.3` *(Wilderness Bound & technical drops)* | **Java 21 LTS+** | `ZenithDefend-1.0.1.jar` |
+| **1.21 Series** | `1.21`, `1.21.1` *(Tricky Trials)*<br>`1.21.2`, `1.21.3` *(Bundles of Bravery)*<br>`1.21.4` *(Garden Awakens)*<br>`1.21.5` *(Spring to Life)*<br>`1.21.6` *(Chase the Skies)*<br>`1.21.7`, `1.21.8` *(Intermediate drops)*<br>`1.21.9` *(The Copper Age)*<br>`1.21.10`, `1.21.11` *(Bugfix & technical drops)* | **Java 21 LTS+** | `ZenithDefend-1.0.1.jar` |
+| **1.20 Series (Trails & Tales)** | `1.20`, `1.20.1`, `1.20.2`, `1.20.3`, `1.20.4`, `1.20.5`, `1.20.6` | **Java 17 LTS** | `ZenithDefend-1.0.1-MC1.20.jar` |
+
+---
+
 ### Core Features
 
 * **3D Cuboid Spawn & Region Protection:** Define 3D protection cuboids by coordinates (`/zd protect set`), corner-selection wand (`/zd protect wand`), or one-command spawn protector (`/zd protect setspawn`).
