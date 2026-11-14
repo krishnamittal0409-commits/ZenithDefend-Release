@@ -2,7 +2,7 @@
 
 **High-Performance Block Logging, Rollback, and Anti-Griefing Engine**  
 *Created and Developed by **Krishna Mittal** • All Rights Reserved*  
-*Compatible with Paper, Purpur, Folia, and Spigot (Minecraft 1.20 up to 1.21.4)*
+*Compatible with Paper, Purpur, Folia, and Spigot (Minecraft 1.20 up to 26.3)*
 
 ---
 
